@@ -10,7 +10,7 @@
 
 
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="driver">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3333/library"/>
         <property name="username" value="root"/>
         <property name="password" value="Pirates@29"/>
@@ -20,5 +20,8 @@
         <property name="dataSource" ref="driver"/>
     </bean>
 
+    <bean class="com.springcore.dao.BookDaoImp" id="bookDaoImp">
+        <property name="template" ref="template" />
+    </bean>
 
 </beans>
