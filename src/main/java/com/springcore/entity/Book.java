@@ -1,9 +1,6 @@
 package com.springcore.entity;
 
 
-import lombok.*;
-
-
 public class Book {
     private long id;
     private String title;
