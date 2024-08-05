@@ -12,7 +12,7 @@ public class BookDaoImp implements BookDao{
 
     private JdbcTemplate template;
 
-//   create function basically adds
+
     @Override
     public String create(Book book) {
         String query = "INSERT INTO book(title,description,author) VALUES (?,?,?)";
